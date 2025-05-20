@@ -13,7 +13,7 @@ app.use(express.json());
 initializeDatabase();
 
 app.get("/", (req, res) => {
-    res.send("Hello, Express!");
+    res.send("Hello, This is school management app!");
 });
 
 app.get("/students", async (req, res) => {
