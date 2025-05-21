@@ -7,7 +7,9 @@ const { Student } = require("./models/students.model");
 const { initializeDatabase } = require("./db/db.config");
 const Teacher = require("./models/teacher.model");
 
-app.use(cors());
+app.use(cors({
+    origin:"*"
+}));
 app.use(express.json());
 
 initializeDatabase();
