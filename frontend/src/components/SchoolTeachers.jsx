@@ -24,11 +24,11 @@ export default function SchoolTeachers() {
             ) : (
                 <>
                     <p className="fw-normal fs-6">
-                        Total available teachers: {totalteachers}
+                        Total available teachers: {totalteachers || 0}
                     </p>
                     <p className="fw-normal fs-6">
                         Teacher availability for subjcts:{" "}
-                        {Object.keys(subjects).join(", ")}
+                        {Object.keys(subjects).join(", ") || "Unknown"}
                     </p>
                 </>
             )}

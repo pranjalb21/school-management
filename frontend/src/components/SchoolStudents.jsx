@@ -8,11 +8,13 @@ export default function SchoolStudents() {
     const totalStudents = students.length;
 
     const averageAttendance = (
-        students.reduce((acc, curr) => acc + (curr.attendance||0), 0) / totalStudents
+        students.reduce((acc, curr) => acc + (curr.attendance || 0), 0) /
+        totalStudents
     ).toFixed(2);
 
     const averageMarks = (
-        students.reduce((acc, curr) => acc + (curr.marks||0), 0) / totalStudents
+        students.reduce((acc, curr) => acc + (curr.marks || 0), 0) /
+        totalStudents
     ).toFixed(2);
 
     const topStudent = students.reduce(
@@ -28,10 +30,10 @@ export default function SchoolStudents() {
                 <p>Loading...</p>
             ) : (
                 <>
-                    <p>Total Students: {totalStudents}</p>
-                    <p>Average Attendance: {averageAttendance}</p>
-                    <p>Average Marks: {averageMarks}</p>
-                    <p>Top Student: {topStudent?.name}</p>
+                    <p>Total Students: {totalStudents || 0}</p>
+                    <p>Average Attendance: {averageAttendance || 0.0}</p>
+                    <p>Average Marks: {averageMarks || 0.0}</p>
+                    <p>Top Student: {topStudent?.name || "Unknown"}</p>
                 </>
             )}
         </div>
