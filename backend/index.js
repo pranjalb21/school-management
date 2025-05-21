@@ -14,7 +14,7 @@ app.use(
 );
 app.use(express.json());
 
-await initializeDatabase();
+initializeDatabase();
 
 app.get("/", (req, res) => {
     res.send("Hello, This is school management app!");
