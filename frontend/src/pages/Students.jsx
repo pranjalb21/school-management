@@ -28,13 +28,14 @@ export default function Students() {
                 {status === "loading" && <p>Loading...</p>}
                 {error && <p>{error}</p>}
                 <ul>
-                    {students?.map((student) => (
-                        <li key={student._id}>
-                            <Link to={`/student-detail/${student._id}`}>
-                                {student.name} (Age: {student.age})
-                            </Link>
-                        </li>
-                    ))}
+                    {status === "fulfilled" &&
+                        students?.map((student) => (
+                            <li key={student._id}>
+                                <Link to={`/student-detail/${student._id}`}>
+                                    {student.name} (Age: {student.age})
+                                </Link>
+                            </li>
+                        ))}
                 </ul>
             </div>
         </main>
