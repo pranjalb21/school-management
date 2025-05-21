@@ -4,15 +4,17 @@ const app = express();
 require("dotenv").config();
 
 const { Student } = require("./models/students.model");
-const { initializeDatabase } = require("./db/db.config");
 const Teacher = require("./models/teacher.model");
+const initializeDatabase = require("./db/db.config.js");
 
-app.use(cors({
-    origin:"*"
-}));
+app.use(
+    cors({
+        origin: "*",
+    })
+);
 app.use(express.json());
 
-initializeDatabase();
+await initializeDatabase();
 
 app.get("/", (req, res) => {
     res.send("Hello, This is school management app!");
