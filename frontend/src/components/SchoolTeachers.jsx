@@ -6,6 +6,13 @@ export default function SchoolTeachers() {
     const { teachers, error, status } = useSelector((state) => state.teacher);
 
     const totalteachers = teachers.length;
+    const subjects = {};
+
+    teachers.map((teacher) => {
+        if (!subjects[teacher.subject]) {
+            subjects[teacher.subject] = 1;
+        }
+    });
 
     useEffect(() => {
         dispatch(fetchTeachers({}));
@@ -16,7 +23,13 @@ export default function SchoolTeachers() {
                 <p>Loading...</p>
             ) : (
                 <>
-                    <p>Total teachers: {totalteachers}</p>
+                    <p className="fw-normal fs-6">
+                        Total available teachers: {totalteachers}
+                    </p>
+                    <p className="fw-normal fs-6">
+                        Teacher availability for subjcts:{" "}
+                        {Object.keys(subjects).join(", ")}
+                    </p>
                 </>
             )}
         </div>

@@ -8,11 +8,11 @@ export default function SchoolStudents() {
     const totalStudents = students.length;
 
     const averageAttendance = (
-        students.reduce((acc, curr) => acc + curr.attendance, 0) / totalStudents
+        students.reduce((acc, curr) => acc + (curr.attendance||0), 0) / totalStudents
     ).toFixed(2);
 
     const averageMarks = (
-        students.reduce((acc, curr) => acc + curr.marks, 0) / totalStudents
+        students.reduce((acc, curr) => acc + (curr.marks||0), 0) / totalStudents
     ).toFixed(2);
 
     const topStudent = students.reduce(

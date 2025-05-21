@@ -32,7 +32,8 @@ export default function Teachers() {
                         teachers?.map((teacher) => (
                             <li key={teacher._id}>
                                 <Link to={`/teacher-detail/${teacher._id}`}>
-                                    {teacher.name} (Age: {teacher.age})
+                                    {teacher.name} (Age: {teacher.age}) -{" "}
+                                    Subject - {teacher.subject}
                                 </Link>
                             </li>
                         ))
