@@ -28,7 +28,7 @@ export default function Students() {
                 {status === "loading" && <p>Loading...</p>}
                 {error && <p>{error}</p>}
                 <ul>
-                    {status === "fulfilled" &&
+                    {status !== "loading" &&
                         students?.map((student) => (
                             <li key={student._id}>
                                 <Link to={`/student-detail/${student._id}`}>
