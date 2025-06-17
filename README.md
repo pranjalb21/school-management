@@ -3,7 +3,7 @@
 
 This is a basic application which offers school management features. This is bult with MERN stack technologies This document outlines the core functionalities and features of the School Management App.
 
-##Demo Link
+## Demo Link
 [School Mangement](https://dainty-queijadas-0c55ce.netlify.app)
 
 ## Tech Stack
