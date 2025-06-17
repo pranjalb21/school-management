@@ -1,9 +1,10 @@
 
 # School Management Application
 
-This document outlines the core functionalities and features of the School Management App.
+This is a basic application which offers school management features. This is bult with MERN stack technologies This document outlines the core functionalities and features of the School Management App.
 
-
+##Demo Link
+[School Mangement](https://dainty-queijadas-0c55ce.netlify.app)
 
 ## Tech Stack
 
@@ -20,34 +21,44 @@ This document outlines the core functionalities and features of the School Manag
 | [![Static Badge](https://img.shields.io/badge/MongoDB-212121?logo=mongodb&labelColor=grey)](#) |
 |---|
 
+## Getting Started
+
+**Get the project**
+```
+git clone https://github.com/pranjalb21/school-management
+cd school-management
+```
+
+**Frontend**
+```
+cd frontend
+npm install or npm i
+npm run dev
+```
+
+**Backend**
+```
+cd backend
+npm install or npm i
+npm run dev
+```
 
 
 ## Features
 
-**Frontend:-**
-
 - **Student Page**
-
-    ☑  List of the details of available students.
-
-    ☑  Add student button for new student addition.
+    - List of the details of available students.
+    - Add student button for new student addition.
 
 - **Classes Page**
-
-    ☑  List of all available students with all the details (including marks and attendance).
-
-    ☑  Filter option by Gender.
-
-    ☑  Sort option by name, marks and attendance.
-
+    - List of all available students with all the details (including marks and attendance).
+    - Filter option by Gender.
+    - Sort option by name, marks and attendance.
+      
 - **Teacher Page**
-
-    ☑  List of the details of available teachers.
-
-    ☑  Add teacher button for new teacher addition.
+    - List of the details of available teachers.
+    - Add teacher button for new teacher addition.
 
 - **School Page**
-
-    ☑  Student information summary including Total Students, Average Attendance and marks for all the students, Top student .
-
-    ☑  Teacher information summary including Total teachers, Teacher availability for list of subjcts.
+    - Student information summary including Total Students, Average Attendance and marks for all the students, Top student .
+    - Teacher information summary including Total teachers, Teacher availability for list of subjcts.
